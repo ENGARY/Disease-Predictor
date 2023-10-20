@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
-descrip = pd.read_csv("C:\\Users\\aryan\\ML PROJECT\\disease predictor\\archive (9)\\symptom_Description.csv")
-scaler = joblib.load("C:\\Users\\aryan\\ML PROJECT\\disease predictor\\scaler.pkl")
-X =  np.load('C:\\Users\\aryan\\ML PROJECT\\disease predictor\\X.npy')
-model = joblib.load("C:\\Users\\aryan\\ML PROJECT\\disease predictor\\model.h5")
-severity = pd.read_csv("C:\\Users\\aryan\\ML PROJECT\\disease predictor\\severity.csv")
-precautions = pd.read_csv("C:\\Users\\aryan\\ML PROJECT\\disease predictor\\archive (9)\\symptom_precaution.csv")
+descrip = pd.read_csv("symptom_Description.csv")
+scaler = joblib.load("scaler.pkl")
+X =  np.load("X.npy")
+model = joblib.load("model.h5")
+severity = pd.read_csv("severity.csv")
+precautions = pd.read_csv("symptom_precaution.csv")
 symptoms = severity["Symptom"]
 symps = []
 for i in symptoms:
@@ -35,8 +35,5 @@ if btn :
        st.write("### ", "Precautions", ":-")
        st.write(precs)
        
-
-
-
    else:
        st.warning("You can select maximum 17 symptoms")
