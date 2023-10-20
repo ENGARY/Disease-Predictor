@@ -14,4 +14,3 @@ tensorflow-estimator
 tensorflow-hub
 tensorflow-io-gcs-filesystem
 scikit-learn
-sklearn
