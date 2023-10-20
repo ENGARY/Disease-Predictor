@@ -14,7 +14,8 @@ for i in symptoms:
     symps.append(i)
 
 st.write("## Disease Predictor Model")
-inputs = st.multiselect('Select three known variables:', symps)
+st.write("Double-click on description to read full information.")
+inputs = st.multiselect('### Select Symptoms:', symps)
 btn = st.button("Predict")
 if btn :
    if len(inputs) <= 17:
