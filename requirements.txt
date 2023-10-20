@@ -1,7 +1,8 @@
 joblib
 keras
 numpy
-opencv-python
+matplotlib
+matplotlib-inline
 pickleshare
 Pillow
 streamlit
